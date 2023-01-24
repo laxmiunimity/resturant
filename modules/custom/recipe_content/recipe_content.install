@@ -1,0 +1,17 @@
+<?php 
+function recipe_content_install(){
+
+$data = [
+    'type' => 'recipe',
+    'title'=> 'My new recipe',
+    'uid' => 1
+];
+$node= Drupal::entityTypeManager()
+->getStorage('node')
+->create($data);
+$node->save();
+
+}
+
+
+?>

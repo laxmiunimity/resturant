@@ -1,0 +1,17 @@
+<?php 
+function article_content_install(){
+
+$data = [
+    'type' => 'article',
+    'title'=> 'My new article',
+    'uid' => 1
+];
+$node= Drupal::entityTypeManager()
+->getStorage('node')
+->create($data);
+$node->save();
+
+}
+
+
+?>
